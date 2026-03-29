@@ -3,13 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
 type ThemeKey = 
-  | 'Monarchs & Magnificence' 
-  | 'House of Majesty' 
-  | 'Imperial Legacy' 
-  | 'A Night of Sovereigns' 
-  | 'Crowns & Legacy' 
-  | 'Gatsby' 
-  | 'Bridgerton';
+  | 'Masquerade' 
+  | 'Glam' 
+  | 'Euphoria' 
+  | 'Oscar Night' 
+  | 'Monarch & Magnificence' 
+  | 'Gatsby';
 
 interface ThemeConfig {
   bg: string;
@@ -21,45 +20,45 @@ interface ThemeConfig {
 }
 
 const THEMES: Record<ThemeKey, ThemeConfig> = {
-  'Monarchs & Magnificence': {
+  'Masquerade': {
+    bg: '#1a052e',
+    text: '#f3e8ff',
+    primary: '#a855f7',
+    secondary: '#2e1065',
+    font: "'Cinzel', serif",
+    accent: '#ffffff'
+  },
+  'Glam': {
+    bg: '#ffffff',
+    text: '#1a1a1a',
+    primary: '#ff0066',
+    secondary: '#fce7f3',
+    font: "'Montserrat', sans-serif",
+    accent: '#000000'
+  },
+  'Euphoria': {
+    bg: '#000000',
+    text: '#ffffff',
+    primary: '#7000ff',
+    secondary: '#1a0033',
+    font: "'Montserrat', sans-serif",
+    accent: '#00f0ff'
+  },
+  'Oscar Night': {
+    bg: '#0a0a0a',
+    text: '#ffffff',
+    primary: '#d4af37',
+    secondary: '#1a1a1a',
+    font: "'Playfair Display', serif",
+    accent: '#ff0000'
+  },
+  'Monarch & Magnificence': {
     bg: '#1a0505',
     text: '#fdf5e6',
     primary: '#d4af37',
     secondary: '#4a0404',
     font: "'Cinzel', serif",
     accent: '#ffffff'
-  },
-  'House of Majesty': {
-    bg: '#05122e',
-    text: '#e0e0e0',
-    primary: '#c0c0c0',
-    secondary: '#0a1a3a',
-    font: "'Cinzel', serif",
-    accent: '#7da4ff'
-  },
-  'Imperial Legacy': {
-    bg: '#052e16',
-    text: '#f0fdf4',
-    primary: '#fcd34d',
-    secondary: '#064e3b',
-    font: "'Playfair Display', serif",
-    accent: '#fbbf24'
-  },
-  'A Night of Sovereigns': {
-    bg: '#0f0714',
-    text: '#f3e8ff',
-    primary: '#a855f7',
-    secondary: '#2e1065',
-    font: "'Cinzel', serif",
-    accent: '#e9d5ff'
-  },
-  'Crowns & Legacy': {
-    bg: '#f8fafc',
-    text: '#1e293b',
-    primary: '#3b82f6',
-    secondary: '#e2e8f0',
-    font: "'Montserrat', sans-serif",
-    accent: '#1d4ed8'
   },
   'Gatsby': {
     bg: '#000000',
@@ -68,14 +67,6 @@ const THEMES: Record<ThemeKey, ThemeConfig> = {
     secondary: '#1a1a1a',
     font: "'Playfair Display', serif",
     accent: '#ffffff'
-  },
-  'Bridgerton': {
-    bg: '#f0f9ff',
-    text: '#1e3a8a',
-    primary: '#60a5fa',
-    secondary: '#dbeafe',
-    font: "'Great Vibes', cursive",
-    accent: '#ec4899'
   }
 };
 
